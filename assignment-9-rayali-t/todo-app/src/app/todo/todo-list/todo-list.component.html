@@ -1,0 +1,24 @@
+<div  *ngIf="items.length > 0">
+<table>
+  <tbody>
+  <tr>
+    <td>Check</td>
+    <td>Title</td>
+    <td>Description</td>
+    <td>Due date</td>
+    <td>Time</td>
+  <tr>
+    <tr *ngFor="let item of items">
+    <td><input type="checkbox"></td>
+      <td>{{item.title}}</td>
+      <td>{{item.description}}</td>
+      <td>{{item.dueDate}}</td>
+      <td>{{item.time}}</td>
+    <td><button>VIEW</button></td>
+    </tr>
+    </tbody>
+  </table>
+<!--<button>EDIT</button>
+<button>DELETE</button>-->
+</div>
+<p *ngIf="items.length<=0">No posts added yet!</p>

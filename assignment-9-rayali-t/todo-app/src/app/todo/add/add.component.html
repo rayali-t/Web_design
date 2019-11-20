@@ -1,0 +1,18 @@
+<!--<div class="todoManagerDiv">
+Title:<input type="text" [(ngModel)]="enteredTitle">//ng model is a directive used for 2 way binding
+<br><br>Description:<input type="text" [(ngModel)]="enteredDescription">
+<br><br>Due Date:<input type="date" [(ngModel)]="enteredDate">
+<br><br>Time:<input type="time" [(ngModel)]="enteredTime">
+<hr>
+<button (click)="onAddPost()">Add Item</button>
+//<p>{{newItem}}</p>--><!--string interpolation
+</div>-->
+
+<form (submit)="onAddPost(itemForm)" #itemForm="ngForm"><!--ngForm angular implicitly attaches form element -->
+  Title:<input type="text" name ="title" ngModel required><!--ng model is a directive used for 2 way binding-->
+  <br><br>Description:<input type="text" name="description" ngModel>
+  <br><br>Due Date:<input type="date" name="dueDate" ngModel required>
+  <br><br>Time:<input type="time" name="time" ngModel required>
+  <hr>
+  <button type="submit">Add Item</button>
+</form>
